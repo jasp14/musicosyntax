@@ -11,6 +11,7 @@ curURL = curURL.split("=");
 idnum = curURL[1];
 if(idnum == undefined){
   alert("MAJOR PROBLEM: there is no ID number!!! Contact someone immediately. \n Defaulting the ID number to 99.")
+  idnum = 99;
 }
 
 
