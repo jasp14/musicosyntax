@@ -9,6 +9,10 @@ var shuffleSequence = seq("consent", "recordid", "background", "practiceintro", 
 var curURL = window.location.search.substring(1);
 curURL = curURL.split("=");
 idnum = curURL[1];
+if(idnum == undefined){
+  alert("MAJOR PROBLEM: there is no ID number!!! Contact someone immediately. \n Defaulting the ID number to 99.")
+}
+
 
 // Use random number generator to choose list for current participant
 var listnum = Math.floor(Math.random() * (6 - 1 + 1) + 1);
