@@ -58,13 +58,12 @@ var defaults = [
 ];
 
 
-var __SentenceCompletionItem = ["SentenceCompletion", "Form",
-  {saveReactionTime: true,
+var __SentenceCompletionItem = ["SentenceCompletion", "Form", {saveReactionTime: true,
     html: ["p",
             ["span", "Instructions for SentenceCompletion go here!"],
             ["input", {size: 75}]
           ]
-  }];
+    }];
 
 
 // Set item list
@@ -104,10 +103,10 @@ var items = [
       itemX.push("AudioMessage");
       itemX.push({html: {include: itemname + ".html"},});
       itemX.push("AcceptabilityJudgment");
-      itemX.push(__SentenceCompletionItem);
       itemX.push({});
     }
     items.push(itemX);
+    items.push(__SentenceCompletionItem);
   }
 
   // For loop to create experimental stimuli items
@@ -119,10 +118,10 @@ var items = [
       itemX.push({html: {include: itemname + ".html"},});
       // alert("adding " + itemname + ".html");
       itemX.push("AcceptabilityJudgment");
-      itemX.push(__SentenceCompletionItem);
       itemX.push({});
     }
     items.push(itemX);
+    items.push(__SentenceCompletionItem);
   }
 
   // For loop to create catch trial items
@@ -138,15 +137,14 @@ var items = [
       itemX.push("AudioMessage");
       itemX.push({html: {include: itemnamestem + "_speech.html"}});
       itemX.push("AcceptabilityJudgment");
-      itemX.push(__SentenceCompletionItem);
       itemX.push({});
     }
     for (j = 0; j < 4; j++) {
       itemX.push("AudioMessage");
       itemX.push({html: {include: itemnamestem + "_song.html"}});
       itemX.push("AcceptabilityJudgment");
-      //itemX.push(__SentenceCompletionItem);
       itemX.push({});
     }
     items.push(itemX);
+    items.push(__SentenceCompletionItem);
   }
