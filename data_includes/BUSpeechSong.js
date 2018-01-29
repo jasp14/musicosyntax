@@ -3,7 +3,7 @@ var expprefix = "buss";
 manualSendResults = true;
 
 // Set experiment sequence
-//var shuffleSequence = seq("consent", "recordid", "background", "practiceintro", startsWith("practice_"), "intro", "Catch_trial_1", rshuffle(startsWith(expprefix)), "exitqs", "sendresults", "debriefing");
+var shuffleSequence = seq("consent", "recordid", "background", "practiceintro", startsWith("practice_"), "intro", "Catch_trial_1", rshuffle(startsWith(expprefix)), "exitqs", "sendresults", "debriefing");
 
 // Get participant ID from URL
 var curURL = window.location.search.substring(1);
@@ -60,10 +60,7 @@ var defaults = [
 
 var __SentenceCompletionItem = ["SentenceCompletion", "Form",
   {saveReactionTime: true,
-    html: ["p",
-            ["span", "Instructions for SentenceCompletion go here!"],
-            ["input", {size: 75}]
-          ]
+    html: ["div", ["p", "This is the first paragraph."], ["p", "This is the second paragraph.", "Containing two text nodes."] ]
   }]
 
 
@@ -104,7 +101,7 @@ var items = [
       itemX.push("AudioMessage");
       itemX.push({html: {include: itemname + ".html"},});
       itemX.push("AcceptabilityJudgment");
-      //itemX.push(__SentenceCompletionItem);
+      itemX.push(__SentenceCompletionItem);
       itemX.push({});
     }
     items.push(itemX);
@@ -119,7 +116,7 @@ var items = [
       itemX.push({html: {include: itemname + ".html"},});
       // alert("adding " + itemname + ".html");
       itemX.push("AcceptabilityJudgment");
-      //itemX.push(__SentenceCompletionItem);
+      itemX.push(__SentenceCompletionItem);
       itemX.push({});
     }
     items.push(itemX);
@@ -138,7 +135,7 @@ var items = [
       itemX.push("AudioMessage");
       itemX.push({html: {include: itemnamestem + "_speech.html"}});
       itemX.push("AcceptabilityJudgment");
-      //itemX.push(__SentenceCompletionItem);
+      itemX.push(__SentenceCompletionItem);
       itemX.push({});
     }
     for (j = 0; j < 4; j++) {
