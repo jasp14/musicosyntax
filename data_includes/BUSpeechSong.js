@@ -61,7 +61,7 @@ var defaults = [
 var __SentenceCompletionItem = ["SentenceCompletion", "Form", {saveReactionTime: true,
     html: ["p",
             ["span", "Instructions for SentenceCompletion go here!"],
-            ["input", {size: 75}]
+            ["input"]
           ]
     }];
 
