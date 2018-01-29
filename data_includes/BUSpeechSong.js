@@ -3,7 +3,7 @@ var expprefix = "buss";
 manualSendResults = true;
 
 // Set experiment sequence
-var shuffleSequence = seq("consent", "recordid", "background", "practiceintro", startsWith("practice_"), "intro", "Catch_trial_1", rshuffle(startsWith(expprefix)), "exitqs", "sendresults", "debriefing");
+//var shuffleSequence = seq("consent", "recordid", "background", "practiceintro", startsWith("practice_"), "intro", "Catch_trial_1", rshuffle(startsWith(expprefix)), "exitqs", "sendresults", "debriefing");
 
 // Get participant ID from URL
 var curURL = window.location.search.substring(1);
