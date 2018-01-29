@@ -60,8 +60,11 @@ var defaults = [
 
 var __SentenceCompletionItem = ["SentenceCompletion", "Form",
   {saveReactionTime: true,
-    html: ["div", ["p", "This is the first paragraph."], ["p", "This is the second paragraph.", "Containing two text nodes."] ]
-  }]
+    html: ["p",
+            ["span", "Instructions for SentenceCompletion go here!"],
+            ["input", {size: 75}]
+          ]
+  }];
 
 
 // Set item list
