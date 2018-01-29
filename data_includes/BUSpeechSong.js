@@ -104,9 +104,9 @@ var items = [
       itemX.push({html: {include: itemname + ".html"},});
       itemX.push("AcceptabilityJudgment");
       itemX.push({});
+      itemX = itemX.concat(__SentenceCompletionItem.slice(1,3));
     }
     items.push(itemX);
-    items.push(__SentenceCompletionItem);
   }
 
   // For loop to create experimental stimuli items
@@ -119,9 +119,9 @@ var items = [
       // alert("adding " + itemname + ".html");
       itemX.push("AcceptabilityJudgment");
       itemX.push({});
+      itemX = itemX.concat(__SentenceCompletionItem.slice(1,3));
     }
     items.push(itemX);
-    items.push(__SentenceCompletionItem);
   }
 
   // For loop to create catch trial items
@@ -144,7 +144,7 @@ var items = [
       itemX.push({html: {include: itemnamestem + "_song.html"}});
       itemX.push("AcceptabilityJudgment");
       itemX.push({});
+      itemX = itemX.concat(__SentenceCompletionItem.slice(1,3));
     }
     items.push(itemX);
-    items.push(__SentenceCompletionItem);
   }
