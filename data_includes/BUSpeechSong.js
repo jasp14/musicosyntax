@@ -36,12 +36,6 @@ var defaults = [
     leftComment: "(Speech)", rightComment: "(Song)"
   },
 
-  "SentenceCompletion", {
-    instructions: "Instructions for sentencecompletion go here!",
-    s: "<input type='text' size=75></input>",
-    timeout: 60000,
-  },
-
   "Question", {
     hasCorrect: false
   },
