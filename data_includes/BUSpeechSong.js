@@ -37,8 +37,8 @@ var defaults = [
   },
 
   "SentenceCompletion", {
-    s: "<input type='text' size=75></input>",
     instructions: "Instructions for sentencecompletion go here!",
+    s: "<input type='text' size=75></input>",
     timeout: 60000,
   },
 
@@ -62,6 +62,16 @@ var defaults = [
   }
 
 ];
+
+
+var __SentenceCompletionItem = ["SentenceCompletion", "Form",
+  {saveReactionTime: true,
+    html: ["p",
+            ["span", "Instructions for SentenceCompletion go here!"],
+            ["input", {size: 75}]
+          ]
+  }]
+
 
 // Set item list
 var items = [
@@ -100,7 +110,7 @@ var items = [
       itemX.push("AudioMessage");
       itemX.push({html: {include: itemname + ".html"},});
       itemX.push("AcceptabilityJudgment");
-      itemX.push("SentenceCompletion");
+      itemX.push(__SentenceCompletionItem);
       itemX.push({});
     }
     items.push(itemX);
@@ -115,7 +125,7 @@ var items = [
       itemX.push({html: {include: itemname + ".html"},});
       // alert("adding " + itemname + ".html");
       itemX.push("AcceptabilityJudgment");
-      itemX.push("SentenceCompletion");
+      itemX.push(__SentenceCompletionItem);
       itemX.push({});
     }
     items.push(itemX);
@@ -134,14 +144,14 @@ var items = [
       itemX.push("AudioMessage");
       itemX.push({html: {include: itemnamestem + "_speech.html"}});
       itemX.push("AcceptabilityJudgment");
-      itemX.push("SentenceCompletion");
+      itemX.push(__SentenceCompletionItem);
       itemX.push({});
     }
     for (j = 0; j < 4; j++) {
       itemX.push("AudioMessage");
       itemX.push({html: {include: itemnamestem + "_song.html"}});
       itemX.push("AcceptabilityJudgment");
-      itemX.push("SentenceCompletion");
+      itemX.push(__SentenceCompletionItem);
       itemX.push({});
     }
     items.push(itemX);
