@@ -58,11 +58,9 @@ var defaults = [
 ];
 
 
-var __SentenceCompletionItem = ["SentenceCompletion", "Form", {saveReactionTime: true,
-    html: ["p",
-            ["span", "Instructions for SentenceCompletion go here!"],
-            ["input"]]
-    }];
+var __SentenceCompletionItem = ["SentenceCompletion", "Form", {
+  saveReactionTime: true,
+  html: "<p>Instructions for SentenceCompletion go here! <input name='SentenceCompletion'></input></p>"}];
 
 
 // Set item list
@@ -95,10 +93,10 @@ var items = [
 ];
 
   // For loop to create practice items
-  for (i = 1; i < 5; i++) {
+  for (i = 1; i < 3; i++) {
     var itemname = "practice_" + i.toString() + "";
     var itemX = [itemname];
-    for (j = 0; j < 8; j++) {
+    for (j = 0; j < 1; j++) {
       itemX.push("AudioMessage");
       itemX.push({html: {include: itemname + ".html"},});
       itemX.push("AcceptabilityJudgment");
@@ -109,15 +107,17 @@ var items = [
   }
 
   // For loop to create experimental stimuli items
-  for (i = 1; i < 5; i++) {
-    var itemname = expprefix + "_list" + listnum.toString() + "_item" + i.toString();
-    var itemX = [itemname];
-    itemX.push("AudioMessage");
-    itemX.push({html: {include: itemname + ".html"},});
-    // alert("adding " + itemname + ".html");
-    itemX.push("AcceptabilityJudgment");
-    itemX.push({});
-    itemX = itemX.concat(__SentenceCompletionItem.slice(1,3));
+  for (i = 1; i < 6; i++) {
+    for (j = 0; j < 1; j++) {
+      var itemname = expprefix + "_list" + listnum.toString() + "_item" + i.toString();
+      var itemX = [itemname];
+      itemX.push("AudioMessage");
+      itemX.push({html: {include: itemname + ".html"},});
+      // alert("adding " + itemname + ".html");
+      itemX.push("AcceptabilityJudgment");
+      itemX.push({});
+      itemX = itemX.concat(__SentenceCompletionItem.slice(1,3));
+    }
     items.push(itemX);
   }
 
@@ -135,6 +135,7 @@ var items = [
       itemX.push({html: {include: itemnamestem + "_speech.html"}});
       itemX.push("AcceptabilityJudgment");
       itemX.push({});
+      itemX = itemX.concat(__SentenceCompletionItem.slice(1,3));
     }
     for (j = 0; j < 4; j++) {
       itemX.push("AudioMessage");
