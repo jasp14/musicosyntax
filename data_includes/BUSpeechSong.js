@@ -5,7 +5,11 @@ manualSendResults = true;
 // Set experiment sequence
 var shuffleSequence = seq("consent", "recordid", "background", "practiceintro", startsWith("practice_"), "intro", "Catch_trial_1", rshuffle(startsWith(expprefix)), "exitqs", "sendresults", "debriefing");
 
-// Get participant ID from URL
+
+// Get participant ID
+var idnum = Math.floor(Math.random()*Math.pow(10,17));
+/*
+// from URL
 var curURL = window.location.search.substring(1);
 curURL = curURL.split("=");
 idnum = curURL[1];
@@ -13,6 +17,7 @@ if(idnum == undefined){
   alert("MAJOR PROBLEM: there is no ID number!!! Contact someone immediately. \n Defaulting the ID number to 99.")
   idnum = 99;
 }
+*/
 
 
 // Use random number generator to choose list for current participant
