@@ -112,14 +112,12 @@ var items = [
   for (i = 1; i < 5; i++) {
     var itemname = expprefix + "_list" + listnum.toString() + "_item" + i.toString();
     var itemX = [itemname];
-    //for (j = 0; j < 8; j++) {
-      itemX.push("AudioMessage");
-      itemX.push({html: {include: itemname + ".html"},});
-      // alert("adding " + itemname + ".html");
-      itemX.push("AcceptabilityJudgment");
-      itemX.push({});
-      itemX = itemX.concat(__SentenceCompletionItem.slice(1,3));
-    //}
+    itemX.push("AudioMessage");
+    itemX.push({html: {include: itemname + ".html"},});
+    // alert("adding " + itemname + ".html");
+    itemX.push("AcceptabilityJudgment");
+    itemX.push({});
+    itemX = itemX.concat(__SentenceCompletionItem.slice(1,3));
     items.push(itemX);
   }
 
