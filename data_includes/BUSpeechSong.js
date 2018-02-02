@@ -86,7 +86,7 @@ var items = [
 
   ["sep", "Separator", { }],
 
-  ["sendresults", "__SendResults__", { }],
+  //["sendresults", "__SendResults__", { }], // we're sending results at the end
 
   ["debriefing", "Form", {consentRequired: false, html: {include: "debriefing.html" }} ]
 
@@ -146,4 +146,5 @@ var items = [
     }
     items.push(itemX);
   }
-  items.push(["sendresults", "__SendResults__", { }]);
+
+items.push(["sendresults", "__SendResults__", { }]);
