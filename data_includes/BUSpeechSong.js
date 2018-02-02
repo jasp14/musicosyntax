@@ -61,8 +61,7 @@ var defaults = [
 var __SentenceCompletionItem = ["SentenceCompletion", "Form", {saveReactionTime: true,
     html: ["p",
             ["span", "Instructions for SentenceCompletion go here!"],
-            ["input"]
-          ]
+            ["input"]]
     }];
 
 
@@ -110,17 +109,17 @@ var items = [
   }
 
   // For loop to create experimental stimuli items
-  for (i = 1; i < 61; i++) {
+  for (i = 1; i < 5; i++) {
     var itemname = expprefix + "_list" + listnum.toString() + "_item" + i.toString();
     var itemX = [itemname];
-    for (j = 0; j < 8; j++) {
+    //for (j = 0; j < 8; j++) {
       itemX.push("AudioMessage");
       itemX.push({html: {include: itemname + ".html"},});
       // alert("adding " + itemname + ".html");
       itemX.push("AcceptabilityJudgment");
       itemX.push({});
       itemX = itemX.concat(__SentenceCompletionItem.slice(1,3));
-    }
+    //}
     items.push(itemX);
   }
 
