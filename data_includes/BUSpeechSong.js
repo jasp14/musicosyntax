@@ -137,13 +137,6 @@ var items = [
       itemX.push({});
       itemX = itemX.concat(__SentenceCompletionItem.slice(1,3));
     }
-    for (j = 0; j < 1; j++) {
-      itemX.push("AudioMessage");
-      itemX.push({html: {include: itemnamestem + "_song.html"}});
-      itemX.push("AcceptabilityJudgment");
-      itemX.push({});
-      itemX = itemX.concat(__SentenceCompletionItem.slice(1,3));
-    }
     items.push(itemX);
   }
 
