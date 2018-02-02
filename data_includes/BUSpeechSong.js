@@ -60,7 +60,7 @@ var defaults = [
 
 var __SentenceCompletionItem = ["SentenceCompletion", "Form", {
   saveReactionTime: true,
-  html: "<p>Instructions for SentenceCompletion go here! <input name='SentenceCompletion'></input></p>"}];
+  html: "<p>Instructions for SentenceCompletion go here! <input type='text' name='SentenceCompletion' class='obligatory'></input></p>"}];
 
 
 // Set item list
@@ -146,3 +146,4 @@ var items = [
     }
     items.push(itemX);
   }
+  items.push(["sendresults", "__SendResults__", { }]);
