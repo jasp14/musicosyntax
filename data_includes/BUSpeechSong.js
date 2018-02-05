@@ -65,7 +65,7 @@ var defaults = [
 
 var __SentenceCompletionItem = ["SentenceCompletion", "Form", {
   saveReactionTime: true,
-  html: "<p>Instructions for SentenceCompletion go here! <input type='text' name='SentenceCompletion' class='obligatory'></input></p>"}];
+  html: "<p>Instructions for SentenceCompletion go here! <input type='text' size='75' name='SentenceCompletion' class='obligatory'></p>"}];
 
 
 // Set item list
