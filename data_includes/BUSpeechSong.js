@@ -33,12 +33,12 @@ var defaults = [
   },
 
   "AcceptabilityJudgment", {
-    s: "Please rate how much that sounded like speech vs. song, using the scale below.",
-    as: [["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"], ["6", "6"], ["7", "7"], ["8", "8"], ["9", "9"], ["0", "10"]],
+    s: "Please rate how melodic vs. unmelodic that sounded below.",
+    as: [["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"]],
     presentAsScale: true,
     timeout: 3000,
     instructions: "Use number keys or click boxes to answer.",
-    leftComment: "(Speech)", rightComment: "(Song)"
+    leftComment: "(Unmelodic)", rightComment: "(Melodic)"
   },
 
   "Question", {
@@ -79,12 +79,12 @@ var items = [
 
   ["practiceintro", Message, {consentRequired: false,
     html: ["div",
-    ["p", "Please put your headphones/earphones on, or make sure your speakers are working. You will hear a series of spoken phrases, each repeated eight times. After each phrase, you will have 3 seconds to indicate whether the phrase sounded more like speech or more like song. As the phrase is repeated your perception of the phrase may or may not change; either way just do your best to accurately report how song-like the phrase sounds after each repetition. After 3 seconds, if you have not responded, the program will automatically go on to the next phrase. You will start with four practice trials to give you an idea of how the experiment will work."]
+    ["p", "Please put your headphones/earphones on, or make sure your speakers are working. You will hear a series of musical phrases, and after each phrase, you will have 5 seconds to indicate whether the phrase sounded melodic or not. After the phrase is presented you will be given an incomplete sentence to finish. After 5 seconds, if you have not responded, the program will automatically forward you to a sentence fragment. You will start with four practice trials to give you an idea of how the experiment will work."]
   ]}],
 
   ["intro", Message, {consentRequired: false,
     html: ["div",
-    ["p", "The test will now begin. Again, you will hear a series of spoken phrases, each repeated eight times. After each phrase, you will have 3 seconds to indicate whether the phrase sounded more like speech or more like song. As the phrase is repeated your perception of the phrase may or may not change; either way just do your best to accurately report how song-like the phrase sounds after each repetition. After 3 seconds, if you have not responded, the program will automatically go on to the next phrase."]
+    ["p", "The test will now begin. Again, you will hear a series of musical phrases, and be asked to rate how melodic it sounded in 5 seconds. After hearing each phrase, you will be presented with a sentence fragment which you will be asked to complete. After 5 seconds, if you have not made a judgment the program will automatically go on to the sentence completion task."]
   ]}],
 
   ["exitqs", "Form", {consentRequired: false, html: {include: "exitqs.html" }} ],
