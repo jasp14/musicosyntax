@@ -71,7 +71,7 @@ function __SentenceCompletionItem(){
  "Our paper illuminated the theory of the phenomenon that",
  "The article talked about the spouse of the actor who",
  "The truck drove into the garage in the driveway that",
- "The diner chef cooked for the waiter of the customer who"],
+ "The diner chef cooked for the waiter of the customer who"];
  var chosen_stimuli = stimuli[Math.floor(Math.random()*stimuli.length)];
  return ["SentenceCompletion", "Form", {
   saveReactionTime: true,
