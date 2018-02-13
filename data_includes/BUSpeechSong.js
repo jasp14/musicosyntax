@@ -62,13 +62,6 @@ var defaults = [
 
 ];
 
-
-var RANDOM_SEED = 0.12345;
-function random_seeded(){
-  var x = Math.sin(RANDOM_SEED++) * 10000;
-  return x - Math.floor(x);
-}
-
 function __SentenceCompletionItem(){
   var stimuli = ["The tourist guide mentioned the bells of the church that",
  " My friend mentioned the students of the piano teacher who",
@@ -78,10 +71,10 @@ function __SentenceCompletionItem(){
  "The article talked about the spouse of the actor who",
  "The truck drove into the garage in the driveway that",
  "The diner chef cooked for the waiter of the customer who"];
- var chosen_stimuli = stimuli[Math.floor(random_seeded()*stimuli.length)];
+ var chosen_stimuli = stimuli[Math.floor(Math.random()*stimuli.length)];
  return ["SentenceCompletion", "Form", {
   saveReactionTime: true,
-  html: "<p>"+chosen_stimuli+"<input type='text' size='75' name='SentenceCompletion' class='obligatory'></p>"}];
+  html: "<p>"+chosen_stimuli+"<input type='text' size='75' name='SentenceCompletion' class='obligatory'><input type='text' style='display:none;' name='TargetSentence' value='"+chosen_stimuli+"'></p>"}];
 }
 
 
