@@ -157,7 +157,7 @@ for (i = 1; i < 3; i++) {
     }
     items.push(itemX);
 }
-
+//harmprime_list1_la{i} s.t. i=1,..,5
 // For loop to create experimental stimuli items
 for (i = 1; i < 6; i++) {
     for (j = 0; j < 1; j++) {
@@ -177,6 +177,8 @@ for (i = 1; i < 6; i++) {
     items.push(itemX);
 }
 
+
+/* We don't need catch trials for now...
 // For loop to create catch trial items
 for (i = 1; i < 5; i++) {
     var itemnamestem = "Catch_trial_" + i.toString();
@@ -199,6 +201,6 @@ for (i = 1; i < 5; i++) {
     }
     items.push(itemX);
 }
-
+*/
 
 items.push(["sendresults", "__SendResults__", {}]);
