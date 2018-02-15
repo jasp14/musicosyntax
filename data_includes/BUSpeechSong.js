@@ -21,7 +21,7 @@ if(idnum == undefined){
 
 
 // Use random number generator to choose list for current participant
-var listnum = Math.floor(Math.random() * (6 - 1 + 1) + 1);
+var listnum = Math.floor(Math.random() * 0) + 1;
 
 // Set controller defaults
 var defaults = [
