@@ -157,19 +157,20 @@ for (i = 1; i < 3; i++) {
     }
     items.push(itemX);
 }
+
 //harmprime_list1_la{i} s.t. i=1,..,5
 // For loop to create experimental stimuli items
 for (i = 1; i < 6; i++) {
+    var itemname = expprefix + "_list" + listnum.toString() + "_la" + i.toString();
+    var itemX = [itemname];
     for (j = 0; j < 1; j++) {
-        var itemname = expprefix + "_list" + listnum.toString() + "_la" + i.toString();
-        var itemX = [itemname];
         itemX.push("AudioMessage");
         itemX.push({
             html: {
                 include: itemname + ".html"
             },
         });
-        // alert("adding " + itemname + ".html");
+        alert("adding " + itemname + ".html");
         itemX.push("AcceptabilityJudgment");
         itemX.push({});
         itemX = itemX.concat(__SentenceCompletionItem().slice(1, 3));
