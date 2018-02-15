@@ -12,7 +12,7 @@ if __name__ == '__main__':
 <html>
 <body>
 <audio class='audio-message' autoplay>
-<source src="''' + file_name + '''" type='audio/wav'>
+<source src="https://github.com/jasp14/musicosyntax/raw/master/chunk_includes/''' + file_name + '''" type='audio/wav'>
 </audio>
 </body>
 </html>

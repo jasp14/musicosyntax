@@ -170,7 +170,6 @@ for (i = 1; i < 6; i++) {
                 include: itemname + ".html"
             },
         });
-        alert("adding " + itemname + ".html");
         itemX.push("AcceptabilityJudgment");
         itemX.push({});
         itemX = itemX.concat(__SentenceCompletionItem().slice(1, 3));
