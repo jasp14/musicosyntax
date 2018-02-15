@@ -152,7 +152,7 @@ for (i = 1; i < 3; i++) {
             },
         });
         itemX.push("AcceptabilityJudgment");
-        itemX.push({});
+        itemX.push({q: itemname});
         itemX = itemX.concat(__SentenceCompletionItem().slice(1, 3));
     }
     items.push(itemX);
@@ -171,7 +171,7 @@ for (i = 1; i < 6; i++) {
         });
         // alert("adding " + itemname + ".html");
         itemX.push("AcceptabilityJudgment");
-        itemX.push({});
+        itemX.push({q: itemname});
         itemX = itemX.concat(__SentenceCompletionItem().slice(1, 3));
     }
     items.push(itemX);
@@ -194,7 +194,7 @@ for (i = 1; i < 5; i++) {
             }
         });
         itemX.push("AcceptabilityJudgment");
-        itemX.push({});
+        itemX.push({q: itemname});
         itemX = itemX.concat(__SentenceCompletionItem().slice(1, 3));
     }
     items.push(itemX);
