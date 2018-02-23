@@ -69,17 +69,28 @@ var defaults = [
 
 ];
 
+function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+}
+
+var sentence_stimuli = ["The tourist guide mentioned the bells of the church that",
+    " My friend mentioned the students of the piano teacher who",
+    "The worker built the beams in the house that",
+    "The video showed me the supervisor of the architect who",
+    "Our paper illuminated the theory of the phenomenon that",
+    "The article talked about the spouse of the actor who",
+    "The truck drove into the garage in the driveway that",
+    "The diner chef cooked for the waiter of the customer who"
+];
+shuffleArray(sentence_stimuli);
 function __SentenceCompletionItem() {
-    var stimuli = ["The tourist guide mentioned the bells of the church that",
-        " My friend mentioned the students of the piano teacher who",
-        "The worker built the beams in the house that",
-        "The video showed me the supervisor of the architect who",
-        "Our paper illuminated the theory of the phenomenon that",
-        "The article talked about the spouse of the actor who",
-        "The truck drove into the garage in the driveway that",
-        "The diner chef cooked for the waiter of the customer who"
-    ];
-    var chosen_stimuli = stimuli[Math.floor(Math.random() * stimuli.length)];
+    if(sentence_stimuli.length == 0){alert("WE'RE OUT OF SENTENCE STIMULI! JACOB, WE'VE GOT A PROBLEM! (more trials than sentences)");}
+    var chosen_stimuli = sentence_stimuli.pop();
     return ["SentenceCompletion", "Form", {
         saveReactionTime: true,
         html: "<p>" + chosen_stimuli + "<input type='text' size='75' name='SentenceCompletion' class='obligatory'><input type='text' style='display:none;' name='TargetSentence' value='" + chosen_stimuli + "'></p>"
