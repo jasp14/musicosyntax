@@ -199,7 +199,7 @@ var sentence_stimuli = ["The tourist guide mentioned the bells of the church tha
         ];
 
         // For loop to create practice items
-        for (i = 1; i < 3; i++) {
+        for (i = 1; i < 5; i++) {
             var itemname = "practice_" + i.toString() + "";
             var itemX = [itemname];
             for (j = 0; j < 1; j++) {
@@ -216,23 +216,24 @@ var sentence_stimuli = ["The tourist guide mentioned the bells of the church tha
             items.push(itemX);
         }
 
-        //harmprime_list1_la{i} s.t. i=1,..,5
         // For loop to create experimental stimuli items
-        for (i = 1; i < 6; i++) {
-            var itemname = expprefix + "_list" + listnum.toString() + "_la" + i.toString();
-            var itemX = [itemname];
-            for (j = 0; j < 1; j++) {
-                itemX.push("AudioMessage");
-                itemX.push({
-                    html: {
-                        include: itemname + ".html"
-                    },
-                });
-                itemX.push("AcceptabilityJudgment");
-                itemX.push({});
-                itemX = itemX.concat(__SentenceCompletionItem().slice(1, 3));
+        for (i = 1; i < 13; i++) {
+            for(var atts in ['_la', '_ha', '_low', '_high']){
+                var itemname = expprefix + "_list" + listnum.toString() + atts + i.toString();
+                var itemX = [itemname];
+                for (j = 0; j < 1; j++) {
+                    itemX.push("AudioMessage");
+                    itemX.push({
+                        html: {
+                            include: itemname + ".html"
+                        },
+                    });
+                    itemX.push("AcceptabilityJudgment");
+                    itemX.push({});
+                    itemX = itemX.concat(__SentenceCompletionItem().slice(1, 3));
+                }
+                items.push(itemX);
             }
-            items.push(itemX);
         }
 
 
